@@ -15,6 +15,5 @@ type Transport interface {
 	// Produce() chan<- PRC               // Produce messages to the transport
 	Connect(Transport) error           // Connect to another transport
 	SendMessage(NetAddr, []byte) error // Send a message to a specific address
-	Addr() NetAddr                     // Get the address of the transport
-
+	Addr() NetAddr
 }
